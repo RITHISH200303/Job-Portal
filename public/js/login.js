@@ -20,12 +20,12 @@ async function loginEvent(event) {
   });
   const responseData = await response.json();
   if(responseData.errorEmail==true){
-    signupErrorElement.textContent='The mail is not exist...'
     signupErrorElement.style.display='block'
+    signupErrorElement.textContent='The mail is not exist...'
   }
   else if(responseData.errorPassword==true){
-    signupErrorElement.textContent='Invalid password for the mail id...'
     signupErrorElement.style.display='block'
+    signupErrorElement.textContent='Invalid password for the mail id...'
   }
   else{
     window.location.href='http://localhost:3000/home'
